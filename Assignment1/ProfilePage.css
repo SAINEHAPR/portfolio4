@@ -86,14 +86,14 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: darkgreen;
+    color: blue;
 }
 #resname{
     font-size: larger;
 }
 
 
-#button1{
+.button1{
     width:200px;
     height: 50px;
     background-color:lavender;
@@ -106,13 +106,13 @@ a:hover{
     left:5px;
     /* margin-top: 10px; */
 }
-#button1:hover{
+.button1:hover{
     background-color: black;
     color: white;
     font-weight: bolder;
     border: 2px white solid;
 }
-#button3{
+.button3{
     width:200px;
     height: 50px;
     background-color:lavender;
@@ -125,18 +125,29 @@ a:hover{
     left:5px;
     /* margin-top: 10px; */
 }
-#button3:hover{
+.button3:hover{
     background-color: black;
     color: white;
     font-weight: bolder;
     border: 2px white solid;
 }
+/* Buttons Responsiveness --------------------------------------------------*/
+.button1, .button3 {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+}
 
+.button3 {
+    top: 65px;
+}
 /* HOME PAGE --------------------------------------------------------------------*/
 .homepage{
-    background-image: url(./placeholder-images/bg-home-office-studio.jpg);
+    background-image: url(./placeholder-images/bg-coffee-shop.jpg);
     margin: 0;
     display:flex;
+    /* background-color: rgba(0, 0, 0, 0.5); */
     flex-direction: column;
     /* opacity: 0.5; */
 }
@@ -157,7 +168,7 @@ a:hover{
     word-break: break-word;
     padding: 50px;
 }
-#button2{
+.button2{
     width:200px;
     height: 50px;
     background-color:lavender;
@@ -166,7 +177,7 @@ a:hover{
     cursor: pointer;
     font-weight: bolder;
 }
-#button2:hover{
+.button2:hover{
     background-color: black;
     color: white;
     font-weight: bolder;
@@ -212,14 +223,151 @@ a:hover{
     float:left;
     margin-right:20px;
 }
-/* Work Experience-------------- */
-.work-item{
-    display: grid;
-    margin: 30px 0;
-}
-.work-details{
 
-}
-.work-summary{
 
+
+
+/* Media Queries for Responsiveness -------------------------------*/
+@media screen and (max-width: 1100px) {
+    .button1 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .button3 {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+    }
+
+    #resname {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Resume Sections */
+    .resume-section {
+        padding: 10px;
+    }
+
+    .project-item {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .projectImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Button Responsiveness */
+    .button1, .button3 {
+        width: 150px;
+        height: 40px;
+        font-size: medium;
+        top: 10px;
+    }
+    .button3 {
+        top: 55px;
+    }
+
+    /* Main Resume Layout */
+    #resname {
+        font-size: 1.5rem;
+    }
+
+    .resume-section {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    .project-item {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .projectImage {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Socials List */
+    .socials {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Button Responsiveness */
+    .button1, .button3 {
+        width: 120px;
+        height: 35px;
+        font-size: small;
+    }
+
+    /* Resume Name */
+    #resname {
+        font-size: 1.3rem;
+    }
+
+    /* Resume Sections */
+    .resume-section {
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    /* Projects Section */
+    .project-item {
+        margin-bottom: 10px;
+    }
+
+    .projectImage {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Socials List */
+    .socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* Button Responsiveness */
+    .button1, .button3 {
+        width: 100px;
+        height: 30px;
+        font-size: small;
+    }
+
+    /* Resume Name */
+    #resname {
+        font-size: 1.2rem;
+    }
+
+    /* Resume Sections */
+    .resume-section {
+        padding: 5px;
+    }
+
+    .project-item {
+        margin-bottom: 8px;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    .projectImage{
+        width: 10rem;
+        height: 10rem;
+    }
 }
